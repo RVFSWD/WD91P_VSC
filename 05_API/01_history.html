@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History API</title>
+</head>
+<body>
+    
+    <button type="button" onclick="forward()"> --> </button>
+    <button type="button" onclick="back()"> <-- </button>
+    <button type="button" onclick="window.location.href='01_about.html'"> About </button>
+    <button type="button" onclick="window.location.href='01_contact.html'"> Contact </button>
+
+    <h1> HOME PAGE </h1>
+
+    <script>
+        // back()
+        // go()
+        // forward()
+
+        function forward() {
+            window.history.forward();
+        }
+
+        function back() {
+            window.history.back(-2);
+        }
+
+        // function goforward() {
+        //     window.history.go(3);
+        // }
+
+        // function gobackward() {
+        //     window.history.go(-3);
+        // }
+
+        let historylist = history.length;
+        document.write("Total History: " + historylist);    
+        
+    </script>
+
+</body>
+</html>

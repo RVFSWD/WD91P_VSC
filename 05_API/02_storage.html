@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3 id="display"></h3>
+    <h3 id="display2"></h3>
+    
+    <script>
+        // Local Storage ###############
+
+        localStorage.setItem("Product#001", "Palladium Boots Black");
+        localStorage.setItem("Product#002", "Nike Air Jordan");
+
+        document.getElementById("display").innerHTML = localStorage.getItem("Product#002");
+
+
+        // Session Storage ############
+
+        sessionStorage.setItem("username", "Noona");
+
+        document.getElementById("display2").innerHTML = sessionStorage.getItem("username");
+
+
+    </script>
+</body>
+</html>
