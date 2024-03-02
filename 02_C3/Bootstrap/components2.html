@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Bootstrap Components</title>
+</head>
+<body>
+
+    <div class="carousel slide" id="Indicators" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#Indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#Indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#Indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="./Porsche.png" class="d-bloc w-100" alt="car"> 
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-item active">
+                    <img src="./img/modernwagon1.jpg" class="d-bloc w-100" alt="car"> 
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-item active">
+                    <img src="./img/modernmclaren1.jpg" class="d-bloc w-100" alt="car"> 
+                </div>
+            </div>
+        </div>    
+        <button class="carousel-control-prev" type="button" data-bs-target="#Indicators" data-bs-slide="prev" ></button>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#Indicators" data-bs-slide="next"></button>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </div>
+
+
+
+    <br><br>
+    
+    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#samplemodal">Click to see modal</button>
+
+    <div class="modal" tabindex="1" id="samplemodal">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"> Sample Title </h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, sed? Animi sequi reiciendis eius quia maxime! Maiores distinctio dolorum nesciunt!<button class="btn btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="Popover content is set in this attribute">Click me!</button></p>
+                    <hr> <br>
+                    <label>Name:</label>
+                    <input type="text" class="form-control">
+                    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <p>HELLO, I'm at the bottom.</p> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS</title>
+</head>
+<body>
+    <form action="04_semantic.html">
+        <fieldset>
+            <legend>SAMPLE FORM</legend>
+        <label>First Name:</label>
+        <input type="text" required> <br>
+        <label>Email:</label>
+        <input type="email"> <br>
+        <label>Password:</label>
+        <input type="password"> <br>
+        <label>Contact No.</label>
+        <input type="number" min="1" max="10"> <br>
+        <label>Quantity:</label>
+        <input type="number" min="1" max="10"> <br>
+        <label>Hobbies:</label><br>
+        <input type="checkbox"><label>Reading Books</label> 
+        <input type="checkbox"><label>Play Video Games</label> <br>
+        <label>Birthdate:</label>
+        <input type="date"> <br>
+        <label>Gender:</label>
+        <input type="Radio" id="m" value="male" name="gender"><label>Male</label>
+        <input type="Radio" id="f" value="female" name="gender"><label>Female</label>
+        <br>
+        <label>Time:</label>
+        <input type="time">
+        <br>
+        <label>Country:</label><br>
+        <select>
+            <option value="Singapore">Singapore</option>
+            <option value="Australia">Australia</option>
+            <option value="Japan">Japan</option>
+        </select>
+        <br><br><br>
+
+        <label>Jobpitch:</label>
+        <textarea name="jobpitch" rows="10" cols="80"></textarea>
+        <br><br> 
+        <label>Please select the distributor of the car you want:</label>
+        <input list="Cars" name="car">
+        <datalist id="Cars">
+            <option>Lamborguini</option>
+            <option>Ferrari</option>
+            <option>Mclaren</option>
+        </datalist>
+        <br><br>
+
+
+        <input type="submit" value="submit">
+        <button type="button" onclick="alert('Thank you. Your response has been submitted.')">SUBMIT</button>
+
+    </fieldset>
+    </form>
+</body>
+</html>

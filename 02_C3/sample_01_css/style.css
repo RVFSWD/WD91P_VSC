@@ -1,0 +1,47 @@
+* {
+    /* margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aquamarine; */
+}
+
+body {
+    background-color: antiquewhite;
+}
+img {
+    /* width: 500px;
+    height: 500px; */
+}
+h2 {
+    background-color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px rgb(10, 218, 233);
+}
+p {
+    color: cornflowerblue;
+}
+
+.lux-img {
+    width: 400px;
+    height: 700px;
+    margin: 60px 400px;
+}
+
+.suv-img {
+    width: 400px;
+    height: 700px;
+    margin: 60px 400px;
+}
+
+.sedan {
+    width: 400px;
+    height: 700px;
+    margin: 60px 400px;
+    /* border: 2px solid black; */
+    /* padding: 100px 300px 100px 300px; */
+}
+
+h1, h2, p {
+    text-align: center;
+
+}
