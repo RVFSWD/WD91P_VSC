@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>JS and the DOM</title>
+</head>
+<body>
+    
+    <h3 id="event"> Javascript can change a content </h3>
+
+    <button type="button" onclick="document.getElementById('event').innerHTML = 'The text has been changed. Welcome to Javascript.'">Click ME</button>
+    
+    
+    <br>
+    <h3 id="eve">GOOD EVENING!</h3>
+    <br>
+    <img id="image" src="./imagesamppe2.png">
+
+    <script>
+        document.getElementById("eve").style.color = "orange";
+        document.getElementById("image").src = "./imagesamppe2.png";
+        document.getElementById("date").innerHTML = "Date Today: " + Date();
+    </script>
+
+</body>
+</html>
