@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2 id="displaytext"></h2>
+    <h2 id="xmas"></h2>
+
+    <script>
+    // SetTimeout ######################    
+
+    // setTimeout(function, milliseconds)    
+
+    function display () {
+        document.getElementById("displaytext").innerHTML = "This is JS Asynchronous";
+    }
+
+    let varName = setTimeout(display, 4000);
+    document.write("Text with no setTimeout. " + varName);
+
+
+    // Callback Function ###############
+
+    function dayToday (day, callback) {
+        document.write("Today is " + day);
+        callback();
+    }
+
+    function call() {
+        document.write("This is a callback function");
+    }
+
+    function callNew() {
+        document.write("This is a callNew function");
+    }
+
+    dayToday('Tuesday', call);
+
+    
+    // Promise Object ######################
+    // Properties: State (Pending, Fulfilled, Rejected) and Result
+
+    function printME (paramname) {
+        document.write("<br>" + paramname)
+    }
+
+    let myPromise = new Promise(function(myResolve, myReject) {
+        let a=0;
+    
+
+    if (a == 0) {
+        myResolve("It is Resolve");
+    } else {
+        myReject ("Error");
+    }    
+});
+
+    myPromise.then (
+        function(value) {printMe(value);},
+        function(error) {printMe(error);}
+    );
+
+
+    // Promise Object with setTimeout #######
+
+    const SecondPromise = new Promise(
+        function(myRes, myRej) {
+            setTimeout (function(){
+                myRes("Happy New Year!");
+            }, 3000);
+        });
+
+        SecondPromise.then (function(value) {
+            document.write("<br>" + value);
+        })
+
+
+    // Async / Await ####################
+
+    async function Disp () {
+        let myPromise = new Promise (function(resolve, reject) {
+            resolve("Merry Christmas!");
+        });
+        document.getElementById("xmas").innerHTML = await myPromise;
+    }
+
+    Disp();
+    
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Arrow function ################
+
+        let sample = () => document.write("Hello WD91P.");
+
+        sample();
+
+
+        // Arrow function with argument / parameters ####################
+
+        let wd91p = (a) => document.write(a);
+        wd91p("Hello WD91P");
+
+        // let currenttime = 7;
+        // let timeNow = (currenttime < 10) ?
+        //     () => document.write("It's time!"):
+        //     () => document.write("It's not time.");
+
+        //     timeNow();
+
+        // const food = ['Pizza', 'Corndog', 'Pancakes']; 
+        // document.write(food.map((foods) => food.length));   
+
+
+        // Spred Operator #################
+
+        const food = ['Lasagna', 'Chocolate', 'Cheesecake'];
+
+        document.write("<br>" + food + "<br>");
+        document.write(...food);
+
+        const devices = ['Laptop', 'Phone', ...food];
+        document.write("<br>" + devices )
+
+
+        // Rest Parameters ##############
+
+        let myFunction = function(...num) {
+            document.write(num);
+        }
+
+        myFunction("<br>" + 6,5,7,8,9 + "<br>");
+
+
+        // Template Literals #############
+
+        let name = "Raymund";
+        document.write(`Hello ${name}`);
+
+        let letter = 'Dear Papa Dudut\n' +
+        'Sumusulat ako para ikwento ang love story ko.\n' + `Sincerely Yours\n`
+
+        // document.write(letter);
+        console.log(letter);
+
+
+        const result = wd91p`I want to go to Boracay`; 
+
+
+        // JS For of Loop ###############
+        
+        const students = ['Rheyna', 'Naeomi', 'Jaybe'];
+
+        for (let element of students) {
+            document.write(element + "<br>");
+        }
+
+        const a = 'KodeGo';
+
+        for (let x of a) {
+            document.write(x);
+        }
+
+        
+
+
+
+    </script>
+</body>
+</html>

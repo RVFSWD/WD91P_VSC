@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Recursive ##############
+
+        function count (number) {
+            document.write(number + "<br>");
+
+            const num = number -1;
+            if (num > 0) {
+              count (num);  
+            }
+        }
+
+        count(5);
+
+
+        // Linear Search ##############
+
+        const arraynum = [1,2,3,4,5,6,7,8,9];
+
+        linearS = (arraynum, value) => {
+            for (let i =0; i < arraynum.length; i++){
+                if(arraynum[i] === value) {
+                    return arraynum[i];
+                    document.write(arraynum[i] + "<br>");
+                }
+            }
+            return "Value not found"
+        }
+
+        document.write(linearS([1,2,3,4,5,6,7,8,9,20],20));
+
+
+        // Binary Search ################
+
+        const arrnum = [1,2,3,4,5,6,7,8,9];
+
+        binaryS = (num, value) => {
+            let min=0;
+            let max= arrnum.length - 1;
+            let mpoint = Math.floor((min + max) / 2);
+
+            while (arrnum[mpoint] !== value && min < max) {
+                if (value < arrnum[mpoint]) {
+                    max = mpoint - 1;
+                } else {
+                    min = mpoint + 1;
+                }
+                mpoint = Math.floor((min + max) /2)
+            }
+
+            if (arrnum[mpoint] === value) {
+                return arrnum[mpoint];
+                document.write(arrnum[mpoint]);
+            } else {
+                return "Not found";
+            }
+        };
+        document.write(binaryS(arrnum,5) + "<br>");
+
+
+        // Bubbles Sort
+
+        const swap = (arr, firstIndex, secondIndex) => {
+            if (arr[secondIndex] < arr[firstIndex]) {
+                const temp = arr [secondIndex];
+                arr[secondIndex] = arr[firstIndex];
+                arr[firstIndex] = temp;
+            }
+        }
+
+        const bubbleS = (arr) => {
+            let arrLength = arr.length;
+
+            do {
+                for(let leftIndex=0; leftIndex < arr.length; leftIndex ++) {
+                    let rightIndex = (leftIndex+1);
+                    if(arr[rightIndex] < arr[leftIndex]) {
+                        swap(arr, leftIndex, rightIndex);
+                    }
+                }
+            }
+            while (arrLength--);
+            return arr;
+        }
+
+        document.write(bubbleS([45,23,67,1,18]) + "<br>");
+
+
+        // Parsing ################
+
+        let PInfo = '{"name": "Peter", "age": 29, "Location": "Naga"}';
+        const objPinfo = JSON.parse(PInfo);
+
+        document.write("My name is " + objPinfo.name + " and I'm " + objPinfo.age + " years old.");
+
+        
+
+    </script>
+</body>
+</html>
